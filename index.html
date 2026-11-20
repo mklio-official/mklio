@@ -186,6 +186,60 @@ button:focus-visible,a:focus-visible{outline:3px solid #36a8e2;outline-offset:3p
 @media(max-width:370px){nav{grid-template-columns:repeat(2,minmax(0,1fr))}.brand{font-size:19px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
+
+/* MK PEDIA resource preview cards */
+.resource-card{
+ display:grid;grid-template-columns:minmax(220px, .78fr) minmax(0,1.45fr);
+ gap:0;margin:15px 0;overflow:hidden;border-radius:21px;
+ border:1px solid #d8e7f2;background:var(--panel);
+ box-shadow:0 9px 28px rgba(26,74,112,.075);
+ transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease
+}
+.resource-card:hover{transform:translateY(-3px);border-color:#9bcce9;box-shadow:0 17px 36px rgba(26,74,112,.13)}
+.paper-art{
+ --art-a:#1769e0;--art-b:#28b9d7;--art-c:#c4f3ff;
+ position:relative;isolation:isolate;overflow:hidden;min-height:225px;padding:17px 18px;
+ display:flex;flex-direction:column;justify-content:space-between;color:#fff;
+ background:linear-gradient(135deg,var(--art-a),var(--art-b));
+}
+.paper-art:before,.paper-art:after{content:"";position:absolute;z-index:-1;border-radius:50%;pointer-events:none}
+.paper-art:before{width:220px;height:220px;right:-70px;top:-95px;background:rgba(255,255,255,.15)}
+.paper-art:after{width:180px;height:180px;left:-85px;bottom:-105px;border:1px solid rgba(255,255,255,.28);box-shadow:0 0 0 18px rgba(255,255,255,.06),0 0 0 38px rgba(255,255,255,.035)}
+.paper-art-notes{--art-a:#1769a8;--art-b:#45b8d8;--art-c:#d9f6ff}
+.paper-art-past{--art-a:#243f83;--art-b:#547ce0;--art-c:#dce5ff}
+.paper-art-worksheet{--art-a:#087f79;--art-b:#43c5a3;--art-c:#d4fff0}
+.paper-art-book{--art-a:#814b9f;--art-b:#c17cbd;--art-c:#f7dcff}
+.paper-art-research{--art-a:#354b65;--art-b:#6d91aa;--art-c:#e1f2ff}
+.paper-art-guide{--art-a:#a15a20;--art-b:#e6a443;--art-c:#fff0c9}
+.paper-art-presentation{--art-a:#2358a7;--art-b:#39a7d9;--art-c:#d8f4ff}
+.paper-art-video{--art-a:#8c3159;--art-b:#e16b80;--art-c:#ffe0e9}
+.paper-art-assignment{--art-a:#4655a4;--art-b:#8a82dc;--art-c:#ece8ff}
+.paper-art-top,.paper-art-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;position:relative;z-index:1}
+.paper-brand{font-size:10px;letter-spacing:2px;font-weight:800;color:rgba(255,255,255,.85)}
+.paper-type{font-size:10px;font-weight:800;padding:6px 10px;border-radius:30px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px)}
+.paper-art-main{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:5px;padding:12px 0}
+.paper-icon{font-size:33px;filter:drop-shadow(0 5px 10px rgba(0,0,0,.14))}
+.paper-subject-label{font-size:9px;letter-spacing:2.2px;font-weight:800;color:rgba(255,255,255,.75)}
+.paper-subject{font-size:clamp(19px,2.2vw,27px);line-height:1.2;font-weight:800;color:#fff;overflow-wrap:anywhere}
+.paper-title{font-size:12px;line-height:1.45;color:rgba(255,255,255,.87);overflow-wrap:anywhere}
+.paper-art-bottom{font-size:10px;font-weight:700;color:rgba(255,255,255,.9)}
+.paper-watermark{position:absolute;right:14px;bottom:20px;font-size:94px;opacity:.11;transform:rotate(-12deg);pointer-events:none}
+.resource-card-content{min-width:0;padding:19px 20px;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.resource-card-content h3{margin:0;font-size:16px;line-height:1.45}
+.resource-meta-chips{display:flex;gap:7px;flex-wrap:wrap;margin:2px 0}
+.resource-meta-chips span{font-size:10px;font-weight:700;color:#3e718f;background:#edf7fc;border:1px solid #dceef7;padding:5px 9px;border-radius:30px}
+.resource-uploader{margin-top:2px}
+.resource-card-content .resource-actions{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.resource-card-content .resource-actions .btn{flex:0 1 auto;min-width:104px}
+body:not(.light) .resource-card{border-color:rgba(174,211,240,.18);background:#10263b}
+body:not(.light) .resource-meta-chips span{color:#c1e7fa;background:#153750;border-color:rgba(174,211,240,.16)}
+@media(max-width:680px){
+ .resource-card{grid-template-columns:1fr}
+ .paper-art{min-height:190px}
+ .resource-card-content{padding:15px}
+ .resource-card-content .resource-actions .btn{flex:1 1 calc(50% - 8px);min-width:0}
+}
+
 </style>
 </head>
 <body class="light">
@@ -545,18 +599,78 @@ function readLocalList(key){
 let favoriteIds=readLocalList(STORAGE_FAV);
 let recentIds=readLocalList(STORAGE_RECENT);
 function saveLocalList(key,list){try{localStorage.setItem(key,JSON.stringify(list));}catch(e){toast("This browser could not save local data.");}}
+function resourceVisualKind(category){
+ const c=String(category||"").toLowerCase();
+ if(c.includes("past"))return "past";
+ if(c.includes("note"))return "notes";
+ if(c.includes("worksheet"))return "worksheet";
+ if(c.includes("book")||c.includes("textbook"))return "book";
+ if(c.includes("research"))return "research";
+ if(c.includes("guide"))return "guide";
+ if(c.includes("presentation"))return "presentation";
+ if(c.includes("video"))return "video";
+ if(c.includes("assignment"))return "assignment";
+ return "general";
+}
+function resourceVisualIcon(kind){
+ return ({past:"📝",notes:"📘",worksheet:"📄",book:"📚",research:"🔬",
+  guide:"🧭",presentation:"📊",video:"🎬",assignment:"✍️",general:"🎓"})[kind]||"🎓";
+}
+function driveFileId(raw){
+ try{
+  const u=new URL(raw);
+  const path=u.pathname;
+  let m=path.match(/\/(?:file|document|spreadsheets|presentation)\/d\/([a-zA-Z0-9_-]+)/);
+  if(m)return m[1];
+  return u.searchParams.get("id")||"";
+ }catch(e){return "";}
+}
+function driveDownloadUrl(raw){
+ const id=driveFileId(raw);
+ if(!id)return raw;
+ let kind="file";
+ try{
+  const p=new URL(raw).pathname;
+  if(p.includes("/document/"))kind="document";
+  else if(p.includes("/spreadsheets/"))kind="spreadsheet";
+  else if(p.includes("/presentation/"))kind="presentation";
+ }catch(e){}
+ if(kind==="document")return "https://docs.google.com/document/d/"+encodeURIComponent(id)+"/export?format=pdf";
+ if(kind==="spreadsheet")return "https://docs.google.com/spreadsheets/d/"+encodeURIComponent(id)+"/export?format=xlsx";
+ if(kind==="presentation")return "https://docs.google.com/presentation/d/"+encodeURIComponent(id)+"/export/pptx";
+ return "https://drive.google.com/uc?export=download&id="+encodeURIComponent(id);
+}
 function resourceCard(r){
  const saved=favoriteIds.includes(r.id);
- return `<article class="card">
-  <div class="split"><h3><a href="/paper/${encodeURIComponent(r.id)}">${esc(r.title)}</a></h3><span class="badge">${esc(r.category||"Resource")}</span></div>
-  <div class="meta">${esc(r.level||"")} • ${esc(r.subject||"")} • ${esc(r.medium||"")}</div>
-  <p>${esc(r.description||"")}</p>
-  <div class="meta">Uploaded by: <b>${esc(r.uploaderName||"MK PEDIA Member")}</b> • ${Number(r.downloads||0)} opens</div>
-  <div class="resource-actions">
-   <button class="btn" type="button" onclick="openResource('${esc(r.id)}')">Open / Download ↗</button>
-   <button class="btn outline" type="button" onclick="shareResource('${esc(r.id)}')">Share</button>
-   <button class="btn outline favorite-btn ${saved?"is-saved":""}" type="button" aria-label="${saved?"Remove saved resource":"Save resource"}" title="${saved?"Remove from saved":"Save for later"}" onclick="toggleFavorite('${esc(r.id)}')">${saved?"★ Saved":"☆ Save"}</button>
-  </div></article>`;
+ const kind=resourceVisualKind(r.category);
+ const icon=resourceVisualIcon(kind);
+ return `<article class="resource-card">
+  <div class="paper-art paper-art-${kind}" data-kind="${kind}">
+   <div class="paper-art-top"><span class="paper-brand">MK PEDIA</span><span class="paper-type">${esc(r.category||"Learning Material")}</span></div>
+   <div class="paper-art-main">
+    <span class="paper-icon" aria-hidden="true">${icon}</span>
+    <span class="paper-subject-label">SUBJECT</span>
+    <strong class="paper-subject">${esc(r.subject||"General")}</strong>
+    <span class="paper-title">${esc(r.title||"Learning Resource")}</span>
+   </div>
+   <div class="paper-art-bottom"><span>${esc(r.level||"All Levels")}</span><span>${esc(r.medium||"")}</span></div>
+   <span class="paper-watermark" aria-hidden="true">${icon}</span>
+  </div>
+  <div class="resource-card-content">
+   <div class="split"><h3>${esc(r.title||"Untitled Resource")}</h3><span class="badge">${esc(r.category||"Resource")}</span></div>
+   <div class="resource-meta-chips">
+    <span>📚 ${esc(r.subject||"General")}</span><span>🎓 ${esc(r.level||"")}</span><span>🌐 ${esc(r.medium||"")}</span>
+   </div>
+   ${r.description?`<p>${esc(r.description)}</p>`:""}
+   <div class="meta resource-uploader">Uploaded by: <b>${esc(r.uploaderName||"MK PEDIA Member")}</b> · ${Number(r.downloads||0)} opens</div>
+   <div class="resource-actions">
+    <button class="btn" type="button" onclick="openResource('${esc(r.id)}')">↗ Open Paper</button>
+    <button class="btn gold" type="button" onclick="downloadResource('${esc(r.id)}')">⬇ Download</button>
+    <button class="btn outline" type="button" onclick="shareResource('${esc(r.id)}')">Share</button>
+    <button class="btn outline favorite-btn ${saved?"is-saved":""}" type="button" aria-label="${saved?"Remove saved resource":"Save resource"}" title="${saved?"Remove from saved":"Save for later"}" onclick="toggleFavorite('${esc(r.id)}')">${saved?"★ Saved":"☆ Save"}</button>
+   </div>
+  </div>
+ </article>`;
 }
 function currentResourceView(){
  const active=document.querySelector(".view:not(.hidden)");
@@ -616,6 +730,15 @@ async function openResource(id){
  const win=window.open(driveOpenUrl(resource.fileURL),"_blank","noopener");
  if(!win)toast("Allow pop-ups to open the Drive link.");
  try{await db.collection("resources").doc(id).update({downloads:firebase.firestore.FieldValue.increment(1)});}catch(error){console.warn(error);}
+}
+async function downloadResource(id){
+ const resource=resources.find(r=>r.id===id);
+ if(!resource||!resource.fileURL)return toast("Download link is unavailable.");
+ const url=driveDownloadUrl(resource.fileURL);
+ const win=window.open(url,"_blank","noopener");
+ if(!win)toast("Allow pop-ups to download this file.");
+ try{await db.collection("resources").doc(id).update({downloads:firebase.firestore.FieldValue.increment(1)});}
+ catch(error){console.warn("Download counter update failed:",error);}
 }
 async function shareResource(id){
  const r=resources.find(x=>x.id===id);if(!r)return;
