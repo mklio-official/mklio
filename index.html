@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b0b1e">
+<meta name="theme-color" content="#159b78">
 <meta name="google-site-verification" content="WOyoFNjE5J8Ohw9-C1U2zriZ3ABsiJu5bublm081Jos">
 <title>MK PEDIA | Knowledge Without Limits</title>
+<meta name="description" content="MK PEDIA — multilingual learning resources for students, teachers and lifelong learners.">
 <link rel="icon" href="logo.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 
 :root{
- --ink:#10243a;--muted:#657b91;--paper:#f4f8fc;--white:#fff;
- --blue:#1769e0;--blue2:#35b7ee;--cyan:#bceeff;--line:#dce7f1;
- --panel:#ffffff;--shadow:0 18px 55px rgba(22,57,93,.09);
+ --ink:#183b46;--muted:#64818a;--paper:#f3fbfc;--white:#fff;
+ --blue:#159b78;--blue2:#72cde4;--cyan:#d9f4fb;--line:#d7edf0;
+ --panel:#ffffff;--shadow:0 18px 55px rgba(24,91,91,.09);
  --radius:24px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -21,16 +22,16 @@ html{scroll-behavior:smooth}
 body{
  font-family:'Poppins',Arial,sans-serif;color:var(--ink);min-height:100vh;
  background:
-  radial-gradient(ellipse at 8% 0%,rgba(64,172,240,.17),transparent 32%),
-  radial-gradient(ellipse at 94% 12%,rgba(89,118,244,.10),transparent 28%),
-  linear-gradient(145deg,#f3f8fd 0%,#edf4fb 48%,#f8fbff 100%);
+  radial-gradient(ellipse at 8% 0%,rgba(114,205,228,.20),transparent 32%),
+  radial-gradient(ellipse at 94% 12%,rgba(21,155,120,.10),transparent 28%),
+  linear-gradient(145deg,#f5fcfc 0%,#edf8f9 48%,#ffffff 100%);
  overflow-x:hidden
 }
 body.light{color-scheme:light}
 body:not(.light){
- --ink:#edf6ff;--muted:#a8bfd3;--paper:#081727;--white:#10263b;
- --line:rgba(174,211,240,.15);--panel:#10263b;--shadow:0 18px 55px rgba(0,0,0,.22);
- background:radial-gradient(ellipse at 10% 0%,rgba(20,128,203,.22),transparent 34%),linear-gradient(145deg,#071321,#0b2034 60%,#081827)
+ --ink:#e9fbf8;--muted:#a6c9c9;--paper:#092321;--white:#103632;
+ --line:rgba(165,224,214,.16);--panel:#103632;--shadow:0 18px 55px rgba(0,0,0,.22);
+ background:radial-gradient(ellipse at 10% 0%,rgba(21,155,120,.20),transparent 34%),linear-gradient(145deg,#071c1b,#0b2927 60%,#081f20)
 }
 button,input,select,textarea{font:inherit}
 button{cursor:pointer;border:0}
@@ -50,10 +51,10 @@ body:not(.light) header{background:rgba(7,22,37,.9);border-color:var(--line)}
 .logo{width:100%;height:100%;display:block;border-radius:13px;object-fit:contain;background:#fff}
 .logo-placeholder{display:none;position:absolute;font:800 20px Georgia,serif;color:#1769e0}
 .logo-missing .logo-placeholder{display:block}
-.brand{font:800 27px 'Playfair Display',Georgia,serif;letter-spacing:2px;color:#123c68}
-body:not(.light) .brand{color:#f2f8ff}
-.tag{font-size:9px;letter-spacing:2.2px;font-weight:800;color:#258ac2}
-body:not(.light) .tag{color:#8ddcff}
+.brand{font:800 28px 'Manrope',sans-serif;letter-spacing:.4px;color:#116f60}
+body:not(.light) .brand{color:#eafff9}
+.tag{font-size:9px;letter-spacing:2.2px;font-weight:800;color:#2698a9}
+body:not(.light) .tag{color:#8de2d2}
 nav{
  position:sticky;top:82px;z-index:25;display:flex;justify-content:center;align-items:center;
  flex-wrap:wrap;gap:8px;padding:12px clamp(10px,3vw,38px);
@@ -71,8 +72,8 @@ body:not(.light) nav{background:rgba(8,26,43,.92);border-color:var(--line)}
 }
 body:not(.light) .navbtn,body:not(.light) .btn{color:#e7f4ff;background:#15334d;border-color:rgba(172,211,239,.2)}
 .navbtn:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(28,94,150,.13);border-color:#91c9ed}
-.navbtn.active{color:#fff;background:linear-gradient(115deg,#1769e0,#27a8e4);border-color:transparent;box-shadow:0 7px 20px rgba(23,105,224,.24)}
-.btn{color:#fff;background:linear-gradient(115deg,#1769e0,#27a8e4);border:0;box-shadow:0 7px 18px rgba(23,105,224,.18)}
+.navbtn.active{color:#fff;background:linear-gradient(115deg,#159b78,#71cde2);border-color:transparent;box-shadow:0 7px 20px rgba(21,155,120,.22)}
+.btn{color:#fff;background:linear-gradient(115deg,#159b78,#71cde2);border:0;box-shadow:0 7px 18px rgba(23,105,224,.18)}
 .btn.gold{color:#173c5a;background:linear-gradient(120deg,#fff0bd,#ffd66d);box-shadow:0 7px 18px rgba(209,158,45,.16)}
 .btn.green{color:#fff;background:linear-gradient(120deg,#16a879,#20c69a)}
 .btn.red{color:#fff;background:linear-gradient(120deg,#e45b70,#c93657)}
@@ -80,8 +81,11 @@ body:not(.light) .navbtn,body:not(.light) .btn{color:#e7f4ff;background:#15334d;
 .btn.outline{color:#27618a;background:transparent;border:1px solid #b9d6e9;box-shadow:none}
 body:not(.light) .btn.outline{color:#bce8ff;border-color:rgba(174,211,240,.3)}
 main{width:min(1200px,100%);margin:0 auto;padding:26px clamp(14px,3vw,28px) 52px}
-.view{animation:fadeUp .35s ease both}
-@keyframes fadeUp{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.view{transform-origin:left center;backface-visibility:hidden;transform-style:preserve-3d}
+.view.page-turn-in{animation:bookPageTurn .62s cubic-bezier(.2,.72,.22,1) both}
+@keyframes bookPageTurn{0%{opacity:.35;transform:perspective(1500px) rotateY(-13deg) translateX(14px);filter:brightness(.88)}55%{opacity:1;transform:perspective(1500px) rotateY(2deg) translateX(-2px);filter:brightness(1.04)}100%{opacity:1;transform:perspective(1500px) rotateY(0) translateX(0);filter:brightness(1)}}
+@media(prefers-reduced-motion:reduce){.view.page-turn-in{animation:none}}
+.brand{font-weight:800;text-shadow:0 1px 0 rgba(255,255,255,.22)}
 .panel{
  position:relative;margin:16px 0;padding:clamp(19px,3vw,30px);border-radius:var(--radius);
  background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);
@@ -100,11 +104,11 @@ p{color:var(--muted);line-height:1.75;font-size:13px}
  box-shadow:0 24px 60px rgba(18,91,151,.24)
 }
 #home>.panel:first-child:after{
- content:"MK";position:absolute;right:4%;top:4%;font:900 clamp(110px,20vw,230px)/1 'Playfair Display',Georgia,serif;
+ content:"MK";position:absolute;right:4%;top:4%;font:900 clamp(110px,20vw,230px)/1 'Manrope',sans-serif;
  color:rgba(255,255,255,.055);pointer-events:none
 }
 #home>.panel:first-child h2,#home>.panel:first-child h3{color:#fff;position:relative;z-index:1}
-#home>.panel:first-child h2 span{color:#a9eaff!important}
+#home>.panel:first-child h2 span{color:#d8f8ff!important}
 #home>.panel:first-child p{color:rgba(240,249,255,.82);position:relative;z-index:1}
 #home>.panel:first-child .stats,#home>.panel:first-child input,#home>.panel:first-child .grid,
 #home>.panel:first-child .toolbar-row,#home>.panel:first-child #resourceList{position:relative;z-index:1}
@@ -113,7 +117,7 @@ p{color:var(--muted);line-height:1.75;font-size:13px}
  padding:16px 12px;border-radius:17px;text-align:center;background:#f4f9fd;
  border:1px solid #dcecf7;box-shadow:inset 0 1px 0 #fff
 }
-.stat b{display:block;font-size:clamp(22px,4vw,30px);font-weight:800;letter-spacing:-1px;color:#1679c4;margin-bottom:2px}
+.stat b{display:block;font-size:clamp(22px,4vw,30px);font-weight:800;letter-spacing:-1px;color:#159b78;margin-bottom:2px}
 #home>.panel:first-child .stat{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px)}
 #home>.panel:first-child .stat b{color:#fff}
 #home>.panel:first-child .stat{color:#e7f6ff}
@@ -126,7 +130,7 @@ input,select,textarea{
 body:not(.light) input,body:not(.light) select,body:not(.light) textarea{background:#0b1d30;color:var(--ink);border-color:var(--line)}
 input::placeholder,textarea::placeholder{color:#91a5b6}
 #home>.panel:first-child input,#home>.panel:first-child select{background:rgba(255,255,255,.97);color:#18364e;border-color:rgba(255,255,255,.6)}
-input:focus,select:focus,textarea:focus{border-color:#38a8e3;box-shadow:0 0 0 4px rgba(56,168,227,.13)}
+input:focus,select:focus,textarea:focus{border-color:#55b9c8;box-shadow:0 0 0 4px rgba(85,185,200,.13)}
 option{color:#17364d;background:#fff}
 textarea{min-height:100px;resize:vertical}
 .card{
@@ -138,7 +142,7 @@ textarea{min-height:100px;resize:vertical}
 .card h3,.card p{overflow-wrap:anywhere}
 .card h3 a{color:inherit;text-decoration:none}
 .card h3 a:hover{color:#168bc5;text-decoration:underline}
-.badge{display:inline-flex;align-items:center;padding:5px 11px;border-radius:30px;background:#e5f5ff;color:#17669b;border:1px solid #cbeafa;font-size:10px;font-weight:800}
+.badge{display:inline-flex;align-items:center;padding:5px 11px;border-radius:30px;background:#e5f5ff;color:#137b72;border:1px solid #c9ece8;font-size:10px;font-weight:800}
 .toolbar-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}
 .resource-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .favorite-btn{min-width:42px}.favorite-btn.is-saved{background:linear-gradient(135deg,#fff4c7,#ffe28b);color:#6c4a00;border-color:#e8cb6c}
@@ -163,17 +167,17 @@ body:not(.light) a{color:#8bd9ff}
 label{font-size:13px;color:var(--muted)}
 button:focus-visible,a:focus-visible{outline:3px solid #36a8e2;outline-offset:3px}
 ::selection{background:rgba(53,183,238,.25)}
-#admin .panel:first-child{background:linear-gradient(125deg,#122f50,#155b91);border:0;color:#fff}
+#admin .panel:first-child{background:linear-gradient(125deg,#116b5c,#168f83);border:0;color:#fff}
 #admin .panel:first-child h2,#admin .panel:first-child p{color:#fff}
 #admin .panel:first-child .stat{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#eaf8ff}
 #admin .panel:first-child .stat b{color:#fff}
-#adminResourceManager .card,#adminResources .card{border-left:4px solid #29a8df}
+#adminResourceManager .card,#adminResources .card{border-left:4px solid #36b8a5}
 #adminResourceSearch{margin:12px 0 16px}
 @media(min-width:900px){nav{justify-content:center}}
 @media(max-width:700px){
  header{min-height:70px;padding:10px 13px}
  .logo-slot{width:48px;height:48px;flex-basis:48px;border-radius:15px}
- .brand{font-size:21px;letter-spacing:1.4px}.tag{font-size:8px;letter-spacing:1.3px}
+ .brand{font-size:22px;letter-spacing:.3px}.tag{font-size:8px;letter-spacing:1.3px}
  nav{top:70px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:9px}
  nav .navbtn{width:100%;min-width:0;padding:9px 5px;font-size:11px}
  main{padding:13px 11px 35px}
@@ -183,7 +187,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #36a8e2;outline-offset:3p
  .stat{padding:13px 8px}
  .actions{gap:6px}
 }
-@media(max-width:370px){nav{grid-template-columns:repeat(2,minmax(0,1fr))}.brand{font-size:19px}}
+@media(max-width:370px){nav{grid-template-columns:repeat(2,minmax(0,1fr))}.brand{font-size:20px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 
@@ -263,9 +267,7 @@ body:not(.light) .resource-meta-chips span{color:#c1e7fa;background:#153750;bord
  <button class="navbtn" type="button" onclick="show('library',this)">📚 Library</button>
  <button class="navbtn" type="button" onclick="show('saved',this)">⭐ Saved</button>
  <button class="navbtn" type="button" onclick="show('upload',this)">📤 Add Link</button>
- <button class="navbtn" type="button" onclick="show('requests',this)">🙏 Requests</button>
  <button class="navbtn" type="button" onclick="show('chat',this)">💬 Chat</button>
- <button class="navbtn" type="button" onclick="show('notifications',this)">🔔 Notifications <span id="notifBadge"></span></button>
  <button class="navbtn" type="button" onclick="show('help',this)">ℹ️ Help</button>
  <button id="adminNav" class="navbtn admin-only" type="button" onclick="show('admin',this)">🛡️ Admin</button>
 </nav>
@@ -275,7 +277,7 @@ body:not(.light) .resource-meta-chips span{color:#c1e7fa;background:#153750;bord
  <div class="panel">
   <h2>Welcome to <span style="color:#fbbf24">MK PEDIA</span></h2>
   <p>From Nursery to Higher Education • Tamil | Sinhala | English Medium</p>
-  <div class="stats">
+  <div id="homeStats" class="stats admin-only">
    <div class="stat"><b id="totalResources">0</b>Resources</div>
    <div class="stat"><b id="totalDownloads">0</b>Downloads</div>
    <div class="stat"><b id="totalUsers">0</b>Members</div>
@@ -376,13 +378,6 @@ body:not(.light) .resource-meta-chips span{color:#c1e7fa;background:#153750;bord
  </div>
 </section>
 
-<section id="requests" class="view hidden">
- <div class="panel"><h2>🙏 Request a paper or note</h2>
-  <textarea id="requestText" placeholder="Which learning material do you need?"></textarea>
-  <button class="btn gold" type="button" onclick="createRequest()">Send Request</button>
-  <div id="requestList"></div>
- </div>
-</section>
 
 <section id="chat" class="view hidden">
  <div class="panel"><h2>💬 Community Chat</h2>
@@ -392,11 +387,6 @@ body:not(.light) .resource-meta-chips span{color:#c1e7fa;background:#153750;bord
  </div>
 </section>
 
-<section id="notifications" class="view hidden">
- <div class="panel"><div class="split"><h2>🔔 Notifications</h2><button class="btn outline" type="button" onclick="markNotificationsRead()">Mark all read</button></div>
-  <div id="notificationList">Sign in to view notifications.</div>
- </div>
-</section>
 
 <section id="help" class="view hidden">
   <div class="panel"><h2>ℹ️ About MK PEDIA</h2>
@@ -405,7 +395,7 @@ body:not(.light) .resource-meta-chips span{color:#c1e7fa;background:#153750;bord
    <h3>📤 How to contribute</h3>
    <ol><li>Upload your learning material to Google Drive.</li><li>Set access to “Anyone with the link – Viewer”.</li><li>Open Add Link and enter the correct title, grade, subject and medium.</li><li>Submit it for review. It appears in the public library after approval.</li></ol>
    <h3>✅ Community guidelines</h3>
-   <ul><li>Share only educational material that you have permission to share.</li><li>Do not share private records or copyrighted books without permission.</li><li>Use accurate titles, subjects, grades and language labels.</li><li>Be respectful in community chat. Never post passwords or private details.</li><li>Report broken or misleading links through the Requests page.</li></ul>
+   <ul><li>Share only educational material that you have permission to share.</li><li>Do not share private records or copyrighted books without permission.</li><li>Use accurate titles, subjects, grades and language labels.</li><li>Be respectful in community chat. Never post passwords or private details.</li></ul>
    <h3>🔐 Privacy note</h3><p>Saved items and recent history stay in this browser. Avoid sharing sensitive personal information in public areas.</p>
   </div>
   <div class="panel"><h3>❓ Frequently asked questions</h3>
@@ -420,7 +410,7 @@ body:not(.light) .resource-meta-chips span{color:#c1e7fa;background:#153750;bord
  <div class="panel"><h2>🛡️ Admin Dashboard</h2><p>Admin access: khalidfairooz4321@gmail.com</p>
   <div class="stats">
    <div class="stat"><b id="aUsers">0</b>Members</div><div class="stat"><b id="aResources">0</b>Approved</div>
-   <div class="stat"><b id="aPending">0</b>Pending</div><div class="stat"><b id="aRejected">0</b>Rejected</div><div class="stat"><b id="aTotal">0</b>Total resources</div><div class="stat"><b id="aRequests">0</b>Requests</div>
+   <div class="stat"><b id="aPending">0</b>Pending</div><div class="stat"><b id="aRejected">0</b>Rejected</div><div class="stat"><b id="aTotal">0</b>Total resources</div>
   </div>
  </div>
  <div class="panel"><h3>📄 Resource review</h3><div id="adminResources">Loading…</div></div>
@@ -433,13 +423,6 @@ body:not(.light) .resource-meta-chips span{color:#c1e7fa;background:#153750;bord
    </select>
   </div>
   <div id="adminResourceManager">Loading resources…</div>
- </div>
- <div class="panel"><h3>🙏 Member requests</h3><div id="adminRequests"></div></div>
- <div class="panel"><h3>📣 Send notification</h3>
-  <input id="noticeEmail" type="email" placeholder="Registered user's email">
-  <input id="noticeTitle" placeholder="Notification title">
-  <textarea id="noticeBody" placeholder="Notification message"></textarea>
-  <button class="btn gold" type="button" onclick="sendAdminNotification()">Send notification</button>
  </div>
 </section>
 
@@ -472,8 +455,7 @@ const auth=firebase.auth();
 const db=firebase.firestore();
 const $=id=>document.getElementById(id);
 
-let user=null,resources=[],chatStop=null,notifStop=null,resourceStop=null;
-let requestCache=[];
+let user=null,resources=[],chatStop=null,resourceStop=null;
 let adminResourceCache=[];
 
 function toast(message){
@@ -501,14 +483,15 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 function show(id,button){
+ const target=$(id);if(!target)return;
  document.querySelectorAll(".view").forEach(el=>el.classList.add("hidden"));
- $(id).classList.remove("hidden");
+ target.classList.remove("hidden");
+ target.classList.remove("page-turn-in");void target.offsetWidth;target.classList.add("page-turn-in");
+ target.addEventListener("animationend",()=>target.classList.remove("page-turn-in"),{once:true});
  document.querySelectorAll("nav .navbtn").forEach(el=>el.classList.remove("active"));
  if(button)button.classList.add("active");
  if(id==="admin")loadAdmin();
  if(id==="chat")loadChat();
- if(id==="notifications")loadNotifications();
- if(id==="requests")loadRequests();
  if(id==="library")renderResources();
  if(id==="saved")renderSaved();
 }
@@ -520,7 +503,7 @@ async function login(){
   await auth.signInWithPopup(provider);
  }catch(error){console.error(error);toast("Google login failed: "+error.message);}
 }
-async function logout(){if(chatStop)chatStop();if(notifStop)notifStop();await auth.signOut();toast("Logged out");}
+async function logout(){if(chatStop)chatStop();await auth.signOut();toast("Logged out");}
 
 auth.onAuthStateChanged(async currentUser=>{
  user=currentUser;
@@ -536,7 +519,8 @@ auth.onAuthStateChanged(async currentUser=>{
   $("authArea").innerHTML='<button class="btn" type="button" onclick="login()">Login with Google</button>';
  }
  $("adminNav").style.display=isAdmin()?"inline-block":"none";
- listenResources();listenNotifications();loadStats();loadRequests();loadChat();
+ if($("homeStats"))$("homeStats").style.display=isAdmin()?"grid":"none";
+ listenResources();loadStats();loadChat();
 });
 
 /* GOOGLE DRIVE MANUAL LINK VALIDATION */
@@ -749,31 +733,6 @@ async function shareResource(id){
  }catch(error){if(error.name!=="AbortError")toast("Could not share this link.");}
 }
 
-/* REQUESTS */
-async function createRequest(){
- if(!user)return toast("Please login first.");
- const text=$("requestText").value.trim();
- if(text.length<5)return toast("Please describe the material you need.");
- try{
-  await db.collection("requests").add({
-   text,uid:user.uid,email:user.email||"",name:user.displayName||user.email,
-   status:"open",createdAt:firebase.firestore.FieldValue.serverTimestamp()
-  });
-  $("requestText").value="";toast("Request sent.");loadRequests();loadStats();
- }catch(error){toast("Request failed: "+error.message);}
-}
-async function loadRequests(){
- if(!user){$("requestList").textContent="Please login to view requests.";return;}
- try{
-  let query=db.collection("requests").orderBy("createdAt","desc").limit(50);
-  if(!isAdmin())query=db.collection("requests").where("uid","==",user.uid).limit(50);
-  const snap=await query.get();
-  const docs=snap.docs.map(d=>({id:d.id,...d.data()}));
-  docs.sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));
-  $("requestList").innerHTML=docs.map(r=>`<div class="card"><b>${esc(r.text)}</b><div class="meta">${esc(r.name||"Member")} • ${esc(r.status||"open")}</div></div>`).join("")||"<p>No requests yet.</p>";
- }catch(error){$("requestList").textContent="Requests unavailable: "+error.message;}
-}
-
 /* CHAT */
 function loadChat(){
  if(chatStop){chatStop();chatStop=null;}
@@ -794,40 +753,7 @@ async function sendChat(){
  }catch(error){toast("Message failed: "+error.message);}
 }
 
-/* NOTIFICATIONS */
-async function notify(uid,title,body,resourceId=""){
- return db.collection("notifications").add({
-  uid,title,body,resourceId,read:false,
-  createdAt:firebase.firestore.FieldValue.serverTimestamp()
- });
-}
-function listenNotifications(){
- if(notifStop){notifStop();notifStop=null;}
- if(!user){$("notifBadge").textContent="";$("notificationList").textContent="Please login.";return;}
- notifStop=db.collection("notifications").where("uid","==",user.uid).onSnapshot(snapshot=>{
-  const unread=snapshot.docs.filter(d=>!d.data().read).length;
-  $("notifBadge").textContent=unread?"("+unread+")":"";
-  if(!$("notifications").classList.contains("hidden"))renderNotifications(snapshot);
- },error=>console.warn("Notification listener:",error));
-}
-function renderNotifications(snapshot){
- const docs=snapshot.docs.slice().sort((a,b)=>(b.data().createdAt?.seconds||0)-(a.data().createdAt?.seconds||0));
- $("notificationList").innerHTML=docs.map(d=>{
-  const n=d.data();return `<div class="card"><div class="split"><b>${esc(n.title)}</b>${n.read?"":'<span class="badge">NEW</span>'}</div><p>${esc(n.body)}</p><div class="meta">${esc(stamp(n.createdAt))}</div></div>`;
- }).join("")||"<p>No notifications yet.</p>";
-}
-async function loadNotifications(){
- if(!user){$("notificationList").textContent="Please login.";return;}
- try{const s=await db.collection("notifications").where("uid","==",user.uid).get();renderNotifications(s);}
- catch(error){$("notificationList").textContent="Notifications unavailable: "+error.message;}
-}
-async function markNotificationsRead(){
- if(!user)return;
- try{
-  const s=await db.collection("notifications").where("uid","==",user.uid).where("read","==",false).get();
-  const batch=db.batch();s.docs.forEach(d=>batch.update(d.ref,{read:true}));await batch.commit();toast("Notifications marked as read.");
- }catch(error){toast(error.message);}
-}
+
 
 /* ADMIN */
 async function loadAdmin(){
@@ -855,11 +781,6 @@ async function loadAdmin(){
   $("aRejected").textContent=all.filter(r=>r.status==="rejected").length;
   $("aTotal").textContent=all.length;
   renderAdminResourceManager();
-  const req=await db.collection("requests").get();
-  $("aRequests").textContent=req.size;
-  $("adminRequests").innerHTML=req.docs.map(d=>{
-   const r=d.data();return `<div class="card"><b>${esc(r.text)}</b><div class="meta">${esc(r.name)} • ${esc(r.status)}</div><button class="btn green smallbtn" type="button" onclick="closeRequest('${esc(d.id)}')">Mark completed</button></div>`;
-  }).join("")||"<p>No requests.</p>";
   const users=await db.collection("users").get();$("aUsers").textContent=users.size;$("totalUsers").textContent=users.size;
  }catch(error){$("adminResources").textContent="Admin data unavailable: "+error.message;console.error(error);}
 }
@@ -920,39 +841,30 @@ async function deleteDriveResource(id){
   await loadAdmin();
  }catch(error){console.error(error);toast(error.message||"Could not delete Drive file.");}
 }
-async function closeRequest(id){
- if(!isAdmin())return;
- try{await db.collection("requests").doc(id).update({status:"completed"});toast("Request completed.");loadAdmin();}
- catch(error){toast(error.message);}
-}
-async function sendAdminNotification(){
- if(!isAdmin())return toast("Admin access required.");
- const email=$("noticeEmail").value.trim().toLowerCase();
- const title=$("noticeTitle").value.trim();const body=$("noticeBody").value.trim();
- if(!email||!title||!body)return toast("Enter email, title and message.");
- try{
-  const s=await db.collection("users").where("email","==",email).limit(1).get();
-  if(s.empty)return toast("No registered member found with that email.");
-  await notify(s.docs[0].id,title,body);
-  $("noticeEmail").value="";$("noticeTitle").value="";$("noticeBody").value="";
-  toast("Notification sent.");
- }catch(error){toast("Could not send notification: "+error.message);}
-}
+
+
 
 /* COUNTERS */
 async function loadStats(){
  $("totalResources").textContent=resources.length;
  $("totalDownloads").textContent=resources.reduce((n,r)=>n+(Number(r.downloads)||0),0);
- if(!user){$("totalUsers").textContent="—";$("totalRequests").textContent="—";return;}
- if(!isAdmin()){$("totalUsers").textContent="—";$("totalRequests").textContent="—";return;}
+ if(!isAdmin()){
+  if($("homeStats"))$("homeStats").style.display="none";
+  return;
+ }
+ if($("homeStats"))$("homeStats").style.display="grid";
  try{
   const [users,requests]=await Promise.all([
    db.collection("users").get(),
-   db.collection("requests").get()
+   db.collection("requests").where("status","==","open").get()
   ]);
   $("totalUsers").textContent=users.size;
-  $("totalRequests").textContent=requests.docs.filter(d=>d.data().status==="open").length;
- }catch(error){console.warn("Stats:",error);}
+  $("totalRequests").textContent=requests.size;
+ }catch(error){
+  console.warn("Admin home stats:",error);
+  if($("totalUsers"))$("totalUsers").textContent="—";
+  if($("totalRequests"))$("totalRequests").textContent="—";
+ }
 }
 </script>
 </body>
