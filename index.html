@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#159B70">
+<meta name="theme-color" content="#0b0b1e">
 <meta name="google-site-verification" content="WOyoFNjE5J8Ohw9-C1U2zriZ3ABsiJu5bublm081Jos">
-<title>MK PEDIA | Sri Lanka Exam Papers, Notes & Learning Resources</title>
-<link rel="icon" type="image/png" sizes="48x48" href="./favicon-48.png?v=5">
-<link rel="icon" type="image/png" sizes="192x192" href="./favicon-192.png?v=5">
-<link rel="icon" type="image/png" sizes="512x512" href="./favicon-512.png?v=5">
-<link rel="shortcut icon" href="./favicon.ico?v=5">
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=5">
+<title>MK PEDIA | Knowledge Without Limits</title>
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png?v=4">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=4">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png?v=4">
+<link rel="shortcut icon" href="/favicon.ico?v=4">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
 <meta name="application-name" content="MK PEDIA">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -243,9 +243,10 @@ body.light .tag{color:#4389ad}
 }
 .logo{width:100%;height:100%;display:block;border-radius:15px;object-fit:contain;
   background:#fff;box-shadow:0 2px 9px rgba(49,113,149,.1)}
-.logo-placeholder{display:none;position:absolute;font:800 20px 'Playfair Display',Georgia,serif;
-  color:#258fc4;letter-spacing:1px}
-.logo-missing .logo-placeholder{display:block}
+.logo-placeholder{display:none;position:absolute;inset:2px;place-items:center;width:48px;height:48px;border-radius:14px;
+  background:linear-gradient(145deg,#243c91,#6879f5 58%,#31a9a0);color:#fff;font:900 19px Poppins,Arial,sans-serif;
+  letter-spacing:-1px;text-shadow:0 2px 8px rgba(15,25,70,.2);box-shadow:0 5px 16px rgba(70,87,190,.22)}
+.logo-missing .logo-placeholder{display:grid}
 .navbtn,.btn{
   overflow:visible;white-space:normal;overflow-wrap:anywhere;word-break:normal;
   text-align:center;line-height:1.35;min-height:42px;flex:0 0 auto;
@@ -313,47 +314,59 @@ nav .navbtn{min-width:max-content;max-width:100%}
 @media(max-width:370px){nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 
-/* V7 — MK PEDIA green, light-blue and white identity */
-:root{
- --bg:#f4fbff;--bg2:#fff;--panel:rgba(255,255,255,.92);
- --panel-strong:#fff;--text:#173b32;--muted:#58766f;
- --line:rgba(21,155,112,.19);--sky:#55bfe8;--sky2:#dff5ff;
- --accent:#159b70;--shadow:0 14px 38px rgba(31,111,91,.10);
-}
-body,body.light{
- color-scheme:light;color:var(--text);
- background:radial-gradient(ellipse at 8% 0%,rgba(175,235,255,.62),transparent 36%),
- radial-gradient(ellipse at 95% 12%,rgba(214,250,235,.78),transparent 34%),
- linear-gradient(135deg,#f0fbff,#fff 52%,#edfff6);
- background-attachment:fixed;
-}
-body.light{--panel:rgba(255,255,255,.92);--panel-strong:#fff;--text:#173b32;--muted:#58766f;--line:rgba(21,155,112,.19);--sky:#55bfe8;--sky2:#dff5ff;--accent:#159b70;--shadow:0 14px 38px rgba(31,111,91,.10)}
-header,nav,body.light header,body.light nav{background:rgba(255,255,255,.88);border-color:rgba(21,155,112,.18)}
-.brand{background-image:linear-gradient(105deg,#087d58 4%,#159b70 48%,#39aee0 100%);filter:drop-shadow(0 3px 12px rgba(21,155,112,.13))}
-.tag,body.light .tag{color:#168b69}
-.logo-slot{background:linear-gradient(145deg,#fff,#e4f8ff 55%,#d8f8e9);border-color:rgba(21,155,112,.25)}
-.panel{background:rgba(255,255,255,.88);border-color:rgba(21,155,112,.16);box-shadow:var(--shadow)}
-.stat,.card{background:linear-gradient(145deg,#fff,#f0fbff 68%,#f0fff7);border-color:rgba(21,155,112,.18)}
-.stat b,body.light .stat b{color:#159b70}
-.navbtn,.btn,body.light .navbtn,body.light .btn{color:#175846;border-color:rgba(21,155,112,.24);background:linear-gradient(135deg,#fff,#e9f8ff 70%,#effff6);box-shadow:inset 0 1px 0 #fff,0 6px 16px rgba(38,126,104,.09)}
-.navbtn.active,body.light .navbtn.active{color:#fff;border-color:#159b70;background:linear-gradient(135deg,#20b783,#11865f 72%,#168fc0)}
-body.light .btn{color:#fff;background:linear-gradient(135deg,#159b70,#087d58)}
-body.light .btn.gold{color:#174b3c;background:linear-gradient(135deg,#fff,#dff5ff 55%,#dff9eb)}
-body.light .btn.green{color:#fff;background:linear-gradient(135deg,#24b982,#11865f)}
-body.light .btn.red{color:#fff;background:linear-gradient(135deg,#e9828d,#c84e61)}
-body.light .btn.gray{color:#245246;background:linear-gradient(135deg,#f1fbff,#dff6ed)}
-body.light .btn.outline{background:#f2fbff;color:#17644d}
-input,select,textarea,body.light input,body.light select,body.light textarea{color:#173b32;background:#fff;border-color:rgba(21,155,112,.22)}
-input:focus,select:focus,textarea:focus{border-color:#159b70;box-shadow:0 0 0 3px rgba(21,155,112,.12)}
-.badge{background:linear-gradient(135deg,#e5fff2,#dff5ff);color:#116849;border-color:#c9f0df}
-a,body.light a{color:#087fba}
-.resource-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.resource-actions .btn{min-width:0;width:100%;white-space:normal}
-.card .resource-title{font-size:17px;line-height:1.45;color:#126b50;margin:0}
-.card .resource-meta{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0}
-.card .resource-meta span{font-size:11px;padding:5px 9px;border-radius:20px;background:#eaf8ff;color:#27617a;border:1px solid #d5edf7}
-.card .resource-meta span.subject-chip{background:#e8fbf1;color:#16734f;border-color:#d0f0df}
-@media(max-width:420px){.resource-actions{grid-template-columns:1fr 1fr}.resource-actions .favorite-btn{grid-column:1/-1}}
+/* MK PEDIA — 2026 premium refresh */
+:root{--text:#172b4d;--muted:#647894;--line:rgba(101,132,184,.18);--panel:rgba(255,255,255,.78);--panel-strong:#fff;--sky:#4779ff;--sky2:#dce7ff;--accent:#5b6cff;--shadow:0 18px 55px rgba(36,63,120,.10)}
+body,body.light{color:var(--text);background:radial-gradient(ellipse at 0% 0%,rgba(169,197,255,.42),transparent 36%),radial-gradient(ellipse at 95% 5%,rgba(212,195,255,.34),transparent 34%),linear-gradient(135deg,#f5f8ff,#fff 48%,#f0f5ff);background-attachment:fixed}
+header,body.light header{background:rgba(255,255,255,.84);border-bottom-color:rgba(111,143,204,.18);backdrop-filter:blur(24px);box-shadow:0 8px 28px rgba(46,70,130,.06)}
+nav,body.light nav{background:rgba(245,248,255,.88);border-bottom-color:rgba(111,143,204,.16);backdrop-filter:blur(24px)}
+.brand{background-image:linear-gradient(100deg,#233c73,#4d69ed 55%,#7e56d8);filter:none}
+.tag{color:#6276bd!important;letter-spacing:1.7px}
+.logo-slot{background:linear-gradient(145deg,#fff,#e6edff);border-color:rgba(104,132,210,.22);box-shadow:0 7px 20px rgba(72,101,185,.12)}
+.navbtn,.btn{border:1px solid rgba(104,132,210,.2);border-radius:13px;color:#30476e;background:linear-gradient(135deg,#fff,#f0f4ff);box-shadow:0 5px 14px rgba(58,80,144,.07);font-weight:700;transition:all .2s ease}
+.navbtn:hover,.btn:hover{transform:translateY(-2px);border-color:rgba(91,108,255,.42);box-shadow:0 10px 22px rgba(70,88,170,.13)}
+nav .navbtn.active{background:linear-gradient(120deg,#566dff,#8060df);color:#fff;border-color:transparent;box-shadow:0 7px 18px rgba(88,103,235,.25)}
+.btn{background:linear-gradient(120deg,#536dff,#7960df);color:white;border-color:transparent}
+.btn.gold{background:linear-gradient(120deg,#536dff,#7960df);color:#fff}.btn.green{background:linear-gradient(120deg,#18a77b,#31c69b);color:#fff}.btn.red{background:linear-gradient(120deg,#f05e75,#d84061);color:#fff}.btn.gray{background:#edf2fb;color:#34496c}.btn.outline{background:#fff;color:#40577e}
+main{max-width:1240px;padding:clamp(12px,2.6vw,30px)}
+.panel{border-radius:26px;background:rgba(255,255,255,.76);border-color:rgba(119,148,207,.18);box-shadow:0 18px 48px rgba(49,73,135,.08);backdrop-filter:blur(22px);padding:clamp(18px,3vw,30px)}
+.panel::after{background:linear-gradient(145deg,rgba(255,255,255,.6),transparent 42%,rgba(112,143,255,.025))}
+h2{font-size:clamp(22px,3vw,30px);color:#1c3155;letter-spacing:-.7px}h3{color:#263e66}
+input,select,textarea{background:rgba(246,249,255,.95)!important;border-color:rgba(116,146,205,.2)!important;border-radius:13px;color:#233c62!important}
+input:focus,select:focus,textarea:focus{border-color:#7891ff!important;box-shadow:0 0 0 4px rgba(94,115,255,.1)!important}
+.stat,.card{border:1px solid rgba(118,145,205,.16);background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(244,247,255,.86));border-radius:19px;box-shadow:0 6px 20px rgba(55,77,139,.045)}
+.stat b{color:#536cff!important}.badge{background:#e9efff;color:#425bd4;border-color:#d9e2ff}
+.card:hover{border-color:rgba(98,119,246,.32);box-shadow:0 12px 26px rgba(57,79,145,.09)}
+#chatList{background:rgba(246,249,255,.85);border-color:rgba(116,146,205,.2)}.message{background:#edf3ff;border-color:#e0e9ff;border-radius:14px}
+footer{color:#7183a0}footer .brand{display:inline-block}
+@media(max-width:600px){header{gap:8px}.panel{border-radius:20px}nav{background:rgba(245,248,255,.93)}nav .navbtn{font-size:11px;min-height:40px;padding:9px 4px}.actions .btn{padding:8px 10px}}
+
+
+/* MK PEDIA — complete visual refresh (logo intentionally preserved) */
+:root{--text:#17233b;--muted:#65748d;--line:rgba(87,108,153,.15);--panel:rgba(255,255,255,.86);--panel-strong:#fff;--sky:#6478f6;--sky2:#e6eaff;--accent:#5268e8;--shadow:0 18px 50px rgba(49,61,115,.085)}
+body,body.light{color:var(--text);background:radial-gradient(ellipse at 0 0,rgba(216,225,255,.78),transparent 35%),radial-gradient(ellipse at 100% 15%,rgba(215,245,236,.65),transparent 32%),linear-gradient(145deg,#f5f7ff 0%,#f8fbff 50%,#f1f8f7 100%);background-attachment:fixed}
+header{background:rgba(255,255,255,.86)!important;border-bottom:1px solid rgba(94,113,157,.12);box-shadow:0 5px 22px rgba(42,58,99,.04);backdrop-filter:blur(24px);padding:13px clamp(14px,4vw,64px);min-height:82px}
+.logo-slot{background:transparent!important;border:none!important;box-shadow:none!important;padding:0!important;width:58px;height:58px;flex-basis:58px;border-radius:0!important}
+.logo{width:52px;height:52px;border-radius:13px!important;border:0!important;box-shadow:none!important}
+.brand{font-family:Poppins,Arial,sans-serif;font-weight:800;letter-spacing:-1.4px;font-size:clamp(22px,3vw,30px);background:linear-gradient(105deg,#3348a7,#6577f3 55%,#39a9a0)!important}
+.tag{font-size:9px;letter-spacing:2px;color:#7b88a7!important;font-weight:700}
+nav{top:0;background:rgba(248,250,255,.91)!important;border-bottom:1px solid rgba(94,113,157,.12);padding:10px clamp(10px,3vw,42px);gap:7px;backdrop-filter:blur(22px)}
+.navbtn,.btn{border:1px solid rgba(106,123,170,.15);border-radius:12px;color:#445271;background:linear-gradient(180deg,#fff,#f5f7ff);box-shadow:0 3px 10px rgba(43,59,111,.035);font-weight:650;transition:all .18s ease}
+.navbtn{padding:10px 14px;font-size:12px}.navbtn:hover,.btn:hover{transform:translateY(-1px);border-color:rgba(96,116,227,.35);box-shadow:0 7px 18px rgba(52,71,142,.09)}
+.navbtn.active{background:linear-gradient(130deg,#5369e9,#7787ff);color:#fff;border-color:transparent;box-shadow:0 5px 15px rgba(91,108,235,.22)}
+.btn{padding:11px 15px;font-size:13px;background:linear-gradient(135deg,#596eea,#7787ff);color:white;border-color:transparent;box-shadow:0 5px 14px rgba(85,103,229,.15)}
+.btn.gold{background:linear-gradient(130deg,#586be4,#8290ff);color:white}.btn.green{background:linear-gradient(135deg,#168d72,#32b48f);color:#fff}.btn.red{background:linear-gradient(135deg,#dc5669,#ed7888);color:#fff}.btn.gray{background:#eef1f8;color:#4b5874;border-color:#dfe4ef}.btn.outline{background:#fff;color:#5365d9;border-color:#dfe4ff}
+main{width:min(1240px,100%);padding:clamp(12px,2.4vw,30px)}
+.panel{background:rgba(255,255,255,.82);border:1px solid rgba(97,117,165,.13);border-radius:24px;padding:clamp(18px,3vw,32px);box-shadow:0 14px 40px rgba(50,64,111,.06);backdrop-filter:blur(20px);margin:16px 0}
+.panel::after{display:none}h2{font-size:clamp(22px,3.2vw,32px);color:#243459;letter-spacing:-.8px;font-weight:800}h3{font-size:17px;color:#344568;font-weight:750}
+p{color:#697892;line-height:1.75}.muted,.meta{color:#7c8aa4}
+.stat,.card{background:linear-gradient(145deg,#fff,#f8faff);border:1px solid rgba(102,121,168,.13);border-radius:18px;box-shadow:0 5px 18px rgba(49,65,112,.035)}
+.stats{gap:12px}.stat{padding:17px 12px}.stat b{font-size:28px;color:#596ce7!important}.card{padding:17px;margin:10px 0}.card:hover{transform:translateY(-2px);border-color:rgba(98,117,229,.27);box-shadow:0 10px 24px rgba(49,65,112,.07)}
+.badge{background:#eef1ff;border:1px solid #e1e6ff;color:#5968c9;font-size:10px;padding:5px 10px}.status-approved{background:#e5f8f0;color:#18815f;border-color:#d2f1e4}.status-pending{background:#fff5df;color:#a97820;border-color:#ffebc2}.status-rejected{background:#ffe9ed;color:#b84e62;border-color:#f9d4dc}
+input,select,textarea{background:#f8faff!important;border:1px solid #e2e7f2!important;border-radius:13px;color:#34425e!important;padding:13px 14px}input:focus,select:focus,textarea:focus{border-color:#8795ff!important;box-shadow:0 0 0 4px rgba(104,120,237,.11)!important;background:#fff!important}input::placeholder,textarea::placeholder{color:#8996ad}
+#chatList{background:#f7f9ff;border:1px solid #e5eaf5}.message{background:#edf1ff;border-color:#e2e7ff;color:#34425e}.toolbar-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}.admin-filter-grid{align-items:center;margin-bottom:14px}.admin-filter-grid input,.admin-filter-grid select{margin:0}.admin-resource-card{padding:19px}.admin-action-row{margin-top:13px}.resource-details{font-size:13px}.empty-state{border:1px dashed #d9e0ef;background:#f8faff;border-radius:17px;padding:24px;text-align:center;color:#71809b}
+#toast{background:rgba(37,49,83,.95);border:1px solid rgba(255,255,255,.18);border-radius:14px;box-shadow:0 12px 35px rgba(33,42,78,.22)}footer{padding:36px 15px;color:#7b89a2}footer .brand{font-size:22px}details{background:#f8faff;border:1px solid #e6eaf4;border-radius:13px;padding:12px;margin:9px 0}details summary{font-weight:700;color:#465574;cursor:pointer}
+@media(min-width:900px){nav{justify-content:center}}@media(max-width:600px){header{padding:10px 12px;min-height:68px}.logo-slot{width:44px;height:44px;flex-basis:44px}.logo{width:42px;height:42px}.brand{font-size:21px}.tag{font-size:7px;letter-spacing:1.3px}nav{gap:5px;padding:8px 7px}nav .navbtn{min-height:38px;padding:8px 9px;font-size:11px}main{padding:9px}.panel{padding:16px;border-radius:19px;margin:11px 0}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-filter-grid{grid-template-columns:1fr}.split{align-items:flex-start}.admin-resource-card .split{gap:10px}.admin-resource-card h3{font-size:15px}.row{gap:6px}.btn,.navbtn{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
 </style>
 </head>
@@ -377,7 +390,7 @@ a,body.light a{color:#087fba}
  <button class="navbtn active" type="button" onclick="show('home',this)">🏠 Home</button>
  <button class="navbtn" type="button" onclick="show('library',this)">📚 Library</button>
  <button class="navbtn" type="button" onclick="show('saved',this)">⭐ Saved</button>
- <button class="navbtn" type="button" onclick="show('upload',this)">📤 Upload Paper</button>
+ <button class="navbtn" type="button" onclick="show('upload',this)">📁 Add File</button>
  <button class="navbtn" type="button" onclick="show('requests',this)">🙏 Requests</button>
  <button class="navbtn" type="button" onclick="show('chat',this)">💬 Chat</button>
  <button class="navbtn" type="button" onclick="show('notifications',this)">🔔 Notifications <span id="notifBadge"></span></button>
@@ -462,35 +475,29 @@ a,body.light a{color:#087fba}
 
 <section id="upload" class="view hidden">
  <div class="panel">
-  <h2>📤 Upload Learning Material</h2>
+  <h2>📤 Upload a PDF Resource</h2>
   <p>Select a PDF directly from your phone or computer. The file is uploaded securely to Cloudinary and submitted to the Admin for approval.</p>
   <hr>
-  <label for="resTitle">Paper / Resource title *</label>
-  <input id="resTitle" placeholder="Example: 2026 Grade 13 Political Science Paper" maxlength="180" required>
+  <input id="resTitle" placeholder="Resource title *" maxlength="180">
   <div class="grid">
-   <label for="resCategory">Resource type</label>
    <select id="resCategory">
     <option>Past Papers</option><option>Short Notes</option><option>Worksheets</option>
     <option>Books</option><option>Textbooks</option><option>Research Papers</option>
     <option>Guides</option><option>Presentations</option><option>Assignments</option><option>Other</option>
    </select>
-   <label for="resLevel">Grade / Education level</label>
    <select id="resLevel">
     <option>Nursery</option><option>Primary</option><option>Grade 6</option><option>Grade 7</option>
     <option>Grade 8</option><option>Grade 9</option><option>Grade 10</option>
     <option>Grade 11 - O/L</option><option>Grade 12 - A/L</option><option>Grade 13 - A/L</option>
     <option>University</option><option>Higher Education</option><option>Other</option>
    </select>
-   <input id="resSubject" placeholder="Subject name (e.g. Tamil, Biology, Political Science) *" maxlength="120" required>
-   <select id="resMedium" aria-label="Language medium">
+   <input id="resSubject" placeholder="Subject name (any subject) *" maxlength="120">
+   <select id="resMedium">
     <option>Tamil Medium</option><option>Sinhala Medium</option><option>English Medium</option><option>Other</option>
    </select>
   </div>
-  <label for="resYear">Year</label>
-  <input id="resYear" type="number" min="1950" max="2100" placeholder="Year (optional, e.g. 2026)">
-  <label for="resFile">Choose PDF file *</label>
-  <input id="resFile" type="file" accept="application/pdf,.pdf" required>
-  <p class="muted">PDF only • Maximum file size: 20 MB • Add the correct subject, grade, medium and year so students can find it easily.</p>
+  <input id="resFile" type="file" accept="application/pdf,.pdf">
+  <p class="muted">PDF only • Maximum file size: 20 MB</p>
   <textarea id="resDescription" placeholder="Description / Additional information (optional)" maxlength="1200"></textarea>
   <button class="btn" id="uploadSubmit" type="button" onclick="addResource()">Upload PDF & Submit for Admin Approval</button>
   <p id="uploadStatus" class="muted" aria-live="polite"></p>
@@ -545,7 +552,12 @@ a,body.light a{color:#087fba}
    <div class="stat"><b id="aPending">0</b>Pending</div><div class="stat"><b id="aRequests">0</b>Requests</div>
   </div>
  </div>
- <div class="panel"><h3>📄 Resource review</h3><div id="adminResources">Loading…</div></div>
+ <div class="panel"><div class="split admin-tools-heading"><h3>📄 Resource management</h3><span class="badge" id="adminShownCount">All papers</span></div>
+  <div class="grid admin-filter-grid"><input id="adminSearch" type="search" placeholder="Search title, subject, uploader…" oninput="filterAdminResources()">
+   <select id="adminStatusFilter" onchange="filterAdminResources()"><option value="all">All statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select>
+   <select id="adminSort" onchange="filterAdminResources()"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A–Z</option><option value="popular">Most opened</option></select>
+   <button class="btn outline" type="button" onclick="clearAdminFilters()">Clear filters</button></div>
+  <div id="adminResources">Loading…</div></div>
  <div class="panel"><h3>🙏 Member requests</h3><div id="adminRequests"></div></div>
  <div class="panel"><h3>📣 Send notification</h3>
   <input id="noticeEmail" type="email" placeholder="Registered user's email">
@@ -669,7 +681,7 @@ function isPdfFile(file){
 function uploadPdfToCloudinary(file,publicId,onProgress){
  return new Promise((resolve,reject)=>{
   const xhr=new XMLHttpRequest();
-  const endpoint=`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`;
+  const endpoint=`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/raw/upload`;
   const form=new FormData();
   form.append("file",file);
   form.append("upload_preset",CLOUDINARY_UPLOAD_PRESET);
@@ -679,7 +691,7 @@ function uploadPdfToCloudinary(file,publicId,onProgress){
   xhr.onload=()=>{
    let data={};try{data=JSON.parse(xhr.responseText||"{}");}catch(_){}
    if(xhr.status>=200&&xhr.status<300&&data.secure_url&&data.public_id)resolve(data);
-   else reject(new Error(data.error?.message||`Cloudinary upload failed (${xhr.status}). Check Cloud Name and Unsigned Upload Preset.`));
+   else reject(new Error(data.error?.message||`Cloudinary upload failed (${xhr.status})`));
   };
   xhr.onerror=()=>reject(new Error("Network error while uploading to Cloudinary."));
   xhr.onabort=()=>reject(new Error("Upload cancelled."));
@@ -701,7 +713,7 @@ async function addResource(){
  try{
   docRef=await db.collection("resources").add({
    title,category:$("resCategory").value,level:$("resLevel").value,
-   subject,medium:$("resMedium").value,year:$("resYear").value.trim(),description:$("resDescription").value.trim(),
+   subject,medium:$("resMedium").value,description:$("resDescription").value.trim(),
    uploaderUid:user.uid,uploaderName:user.displayName||user.email,
    uploaderEmail:user.email||"",status:"pending",downloads:0,
    storageProvider:"cloudinary",
@@ -719,7 +731,7 @@ async function addResource(){
    uploadedAt:firebase.firestore.FieldValue.serverTimestamp()
   });
   await notify(user.uid,"Resource submitted","Your PDF has been uploaded to Cloudinary and is waiting for admin approval.",docRef.id);
-  $("resTitle").value="";$("resSubject").value="";$("resYear").value="";$("resFile").value="";$("resDescription").value="";
+  $("resTitle").value="";$("resSubject").value="";$("resFile").value="";$("resDescription").value="";
   progress.value=100;$("uploadStatus").textContent="Upload complete. Your resource is waiting for Admin approval.";
   toast("PDF uploaded to Cloudinary and submitted for review.");
  }catch(error){
@@ -751,20 +763,14 @@ let recentIds=readLocalList(STORAGE_RECENT);
 function saveLocalList(key,list){try{localStorage.setItem(key,JSON.stringify(list));}catch(e){toast("This browser could not save local data.");}}
 function resourceCard(r){
  const saved=favoriteIds.includes(r.id);
- const meta=[r.level,r.subject,r.medium,r.year].filter(Boolean);
  return `<article class="card">
-  <div class="split"><h3 class="resource-title">📄 ${esc(r.title)}</h3><span class="badge">${esc(r.category||"Resource")}</span></div>
-  <div class="resource-meta">
-   ${r.level?`<span>🎓 ${esc(r.level)}</span>`:""}
-   ${r.subject?`<span class="subject-chip">📘 ${esc(r.subject)}</span>`:""}
-   ${r.medium?`<span>🌐 ${esc(r.medium)}</span>`:""}
-   ${r.year?`<span>📅 ${esc(r.year)}</span>`:""}
-  </div>
-  ${r.description?`<p>${esc(r.description)}</p>`:""}
-  <div class="meta">Uploaded by: <b>${esc(r.uploaderName||"MK PEDIA Member")}</b> • ${Number(r.downloads||0)} opens / downloads</div>
+  <div class="split"><h3><a href="/paper/${encodeURIComponent(r.id)}">${esc(r.title)}</a></h3><span class="badge">${esc(r.category||"Resource")}</span></div>
+  <div class="meta">${esc(r.level||"")} • ${esc(r.subject||"")} • ${esc(r.medium||"")}</div>
+  <p>${esc(r.description||"")}</p>
+  <div class="meta">Uploaded by: <b>${esc(r.uploaderName||"MK PEDIA Member")}</b> • ${Number(r.downloads||0)} opens</div>
   <div class="resource-actions">
-   <button class="btn green" type="button" onclick="openResource('${esc(r.id)}')">↗ Open</button>
-   <button class="btn" type="button" onclick="downloadResource('${esc(r.id)}')">⬇ Download</button>
+   <button class="btn" type="button" onclick="openResource('${esc(r.id)}')">Open / Download ↗</button>
+   <button class="btn outline" type="button" onclick="shareResource('${esc(r.id)}')">Share</button>
    <button class="btn outline favorite-btn ${saved?"is-saved":""}" type="button" aria-label="${saved?"Remove saved resource":"Save resource"}" title="${saved?"Remove from saved":"Save for later"}" onclick="toggleFavorite('${esc(r.id)}')">${saved?"★ Saved":"☆ Save"}</button>
   </div></article>`;
 }
@@ -779,7 +785,7 @@ function renderResources(){
  const medium=isLibrary?($("libMedium")?.value||""):($("homeMedium")?.value||"");
  const category=isLibrary?($("libCategory")?.value||""):($("homeCategory")?.value||"");
  let filtered=resources.filter(r=>
-  (!q||[r.title,r.subject,r.description,r.level,r.category,r.medium,r.year,r.uploaderName].join(" ").toLowerCase().includes(q))&&
+  (!q||[r.title,r.subject,r.description,r.level,r.category,r.medium,r.uploaderName].join(" ").toLowerCase().includes(q))&&
   (!level||r.level===level)&&(!medium||r.medium===medium)&&(!category||r.category===category)
  );
  if(isLibrary){
@@ -827,21 +833,6 @@ async function openResource(id){
  const win=window.open(url,"_blank","noopener");
  if(!win)toast("Allow pop-ups to open the PDF.");
  try{await db.collection("resources").doc(id).update({downloads:firebase.firestore.FieldValue.increment(1)});}catch(error){console.warn(error);}
-}
-async function downloadResource(id){
- const resource=resources.find(r=>r.id===id);if(!resource)return;
- const url=resourceFileUrl(resource);if(!url)return toast("This file is unavailable.");
- const filename=safeFileName(resource.fileName||((resource.title||"MK-PEDIA-resource")+".pdf"));
- try{
-  const response=await fetch(url);if(!response.ok)throw new Error("Download request failed.");
-  const blob=await response.blob(),objectUrl=URL.createObjectURL(blob);
-  const link=document.createElement("a");link.href=objectUrl;link.download=filename;
-  document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(objectUrl),1500);
-  try{await db.collection("resources").doc(id).update({downloads:firebase.firestore.FieldValue.increment(1)});}catch(error){console.warn(error);}
- }catch(error){
-  toast("Direct download was blocked by the file host. Opening the PDF instead.");
-  window.open(url,"_blank","noopener");
- }
 }
 async function shareResource(id){
  const r=resources.find(x=>x.id===id);if(!r)return;
@@ -934,26 +925,52 @@ async function markNotificationsRead(){
 }
 
 /* ADMIN */
+let adminResourcesCache=[];
+function filterAdminResources(){
+ if(!isAdmin())return;
+ const q=($("adminSearch")?.value||"").trim().toLowerCase();
+ const status=$("adminStatusFilter")?.value||"all";
+ const sort=$("adminSort")?.value||"newest";
+ let list=adminResourcesCache.filter(r=>(status==="all"||r.status===status)&&(!q||[r.title,r.subject,r.description,r.level,r.category,r.medium,r.uploaderName,r.uploaderEmail].join(" ").toLowerCase().includes(q)));
+ if(sort==="title")list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
+ else if(sort==="popular")list.sort((a,b)=>(Number(b.downloads)||0)-(Number(a.downloads)||0));
+ else if(sort==="oldest")list.sort((a,b)=>(a.createdAt?.seconds||0)-(b.createdAt?.seconds||0));
+ else list.sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));
+ const statusLabel=status=>status==="approved"?"Approved":status==="rejected"?"Rejected":"Pending review";
+ $("adminShownCount").textContent=`Showing ${list.length} of ${adminResourcesCache.length}`;
+ $("adminResources").innerHTML=list.map(r=>`
+  <article class="card admin-resource-card">
+   <div class="split"><h3>${esc(r.title||"Untitled resource")}</h3><span class="badge status-${esc(r.status||"pending")}">${esc(statusLabel(r.status))}</span></div>
+   <p class="resource-details">${esc(r.level||"")} • ${esc(r.subject||"")} • ${esc(r.medium||"")} • ${esc(r.category||"")}</p>
+   ${r.description?`<p>${esc(r.description)}</p>`:""}
+   <div class="meta">Uploader: ${esc(r.uploaderName||"Unknown")} (${esc(r.uploaderEmail||"Not provided")}) · ${Number(r.downloads||0)} opens</div>
+   ${resourceFileUrl(r)?`<p><a href="${esc(resourceFileUrl(r))}" target="_blank" rel="noopener">Preview PDF ↗</a></p>`:"<p class=\"muted\">No file URL available</p>"}
+   <div class="row admin-action-row">
+    ${r.status==="pending"?`<button class="btn green smallbtn" type="button" onclick="reviewResource('${esc(r.id)}','approved')">✓ Approve</button><button class="btn red smallbtn" type="button" onclick="reviewResource('${esc(r.id)}','rejected')">Reject</button>`:""}
+    ${r.status==="rejected"?`<button class="btn green smallbtn" type="button" onclick="reviewResource('${esc(r.id)}','approved')">Approve now</button>`:""}
+    ${r.status==="approved"?`<button class="btn gray smallbtn" type="button" onclick="reviewResource('${esc(r.id)}','rejected')">Unpublish / Reject</button>`:""}
+    <button class="btn red smallbtn" type="button" onclick="deleteResource('${esc(r.id)}')">🗑 Delete</button>
+   </div>
+  </article>`).join("")||'<div class="empty-state"><b>No papers match these filters.</b><p>Try another search or reset the filters.</p></div>';
+}
+function clearAdminFilters(){
+ ["adminSearch"].forEach(id=>{if($(id))$(id).value="";});
+ if($("adminStatusFilter"))$("adminStatusFilter").value="all";
+ if($("adminSort"))$("adminSort").value="newest";
+ filterAdminResources();
+}
 async function loadAdmin(){
  if(!isAdmin())return;
  try{
   const snap=await db.collection("resources").get();
-  const all=snap.docs.map(d=>({id:d.id,...d.data()}));
+  const all=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));
   const pending=all.filter(r=>r.status==="pending");
-  $("adminResources").innerHTML=pending.map(r=>`
-   <div class="card">
-    <h3>${esc(r.title)}</h3>
-    <p>${esc(r.level)} • ${esc(r.subject)} • ${esc(r.medium)} • ${esc(r.category)} • ${esc(r.year||"Year not given")}</p>
-    <p>${esc(r.description||"")}</p>
-    <div class="meta">Uploader: ${esc(r.uploaderName)} (${esc(r.uploaderEmail)})</div>
-    <p><a href="${esc(resourceFileUrl(r))}" target="_blank" rel="noopener">Preview uploaded PDF ↗</a></p>
-    <div class="row">
-     <button class="btn green smallbtn" type="button" onclick="reviewResource('${esc(r.id)}','approved')">Approve</button>
-     <button class="btn red smallbtn" type="button" onclick="reviewResource('${esc(r.id)}','rejected')">Reject</button>
-     <button class="btn gray smallbtn" type="button" onclick="deleteResource('${esc(r.id)}')">Delete</button>
-    </div>
-   </div>`).join("")||"<p>No pending resources.</p>";
-  $("aResources").textContent=all.filter(r=>r.status==="approved").length;
+  const approved=all.filter(r=>r.status==="approved");
+  const rejected=all.filter(r=>r.status==="rejected");
+  adminResourcesCache=all;
+  $("adminResources").innerHTML="";
+  filterAdminResources();
+  $("aResources").textContent=approved.length;
   $("aPending").textContent=pending.length;
   const req=await db.collection("requests").get();
   $("aRequests").textContent=req.size;
@@ -976,7 +993,7 @@ async function reviewResource(id,status){
 }
 async function deleteResource(id){
  if(!isAdmin())return toast("Admin access required.");
- if(!confirm("Remove this resource from the MK PEDIA library? The Cloudinary file will remain in Cloudinary and may need manual deletion from its dashboard."))return;
+ if(!confirm("Permanently remove this paper from the MK PEDIA website? It will no longer appear in the library. (Cloudinary-hosted file deletion requires server-side credentials and may need a separate cleanup.)"))return;
  try{
   const ref=db.collection("resources").doc(id),snap=await ref.get();
   if(!snap.exists)return toast("Resource not found.");
