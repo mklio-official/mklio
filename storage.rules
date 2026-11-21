@@ -1,0 +1,31 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /resources/{uploaderUid}/{resourceId}/{fileName} {
+      function resourceDoc() {
+        return firestore.get(/databases/(default)/documents/resources/$(resourceId));
+      }
+      function isAdmin() {
+        return request.auth != null
+          && request.auth.token.email == "khalidfairooz4321@gmail.com";
+      }
+      // Public visitors can read only approved PDFs. Admin and uploader can inspect their own upload.
+      allow read: if isAdmin()
+        || (request.auth != null && request.auth.uid == uploaderUid)
+        || (resourceDoc().data.status == "approved");
+
+      // Each signed-in member can upload a PDF only into their own UID folder.
+      allow create: if request.auth != null
+        && request.auth.uid == uploaderUid
+        && request.resource.size <= 20 * 1024 * 1024
+        && request.resource.contentType == "application/pdf";
+
+      // Only the uploader or the site administrator can remove an object.
+      allow delete: if isAdmin()
+        || (request.auth != null && request.auth.uid == uploaderUid);
+
+      // Uploaded objects cannot be overwritten or modified by clients.
+      allow update: if false;
+    }
+  }
+}
