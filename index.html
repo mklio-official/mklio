@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b0b1e">
+<meta name="theme-color" content="#159B70">
 <meta name="google-site-verification" content="WOyoFNjE5J8Ohw9-C1U2zriZ3ABsiJu5bublm081Jos">
-<title>MK PEDIA | Knowledge Without Limits</title>
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png?v=4">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=4">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png?v=4">
-<link rel="shortcut icon" href="/favicon.ico?v=4">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+<title>MK PEDIA | Sri Lanka Exam Papers, Notes & Learning Resources</title>
+<link rel="icon" type="image/png" sizes="48x48" href="./favicon-48.png?v=5">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicon-192.png?v=5">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon-512.png?v=5">
+<link rel="shortcut icon" href="./favicon.ico?v=5">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=5">
 <meta name="application-name" content="MK PEDIA">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -312,6 +312,49 @@ nav .navbtn{min-width:max-content;max-width:100%}
 }
 @media(max-width:370px){nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+
+/* V7 — MK PEDIA green, light-blue and white identity */
+:root{
+ --bg:#f4fbff;--bg2:#fff;--panel:rgba(255,255,255,.92);
+ --panel-strong:#fff;--text:#173b32;--muted:#58766f;
+ --line:rgba(21,155,112,.19);--sky:#55bfe8;--sky2:#dff5ff;
+ --accent:#159b70;--shadow:0 14px 38px rgba(31,111,91,.10);
+}
+body,body.light{
+ color-scheme:light;color:var(--text);
+ background:radial-gradient(ellipse at 8% 0%,rgba(175,235,255,.62),transparent 36%),
+ radial-gradient(ellipse at 95% 12%,rgba(214,250,235,.78),transparent 34%),
+ linear-gradient(135deg,#f0fbff,#fff 52%,#edfff6);
+ background-attachment:fixed;
+}
+body.light{--panel:rgba(255,255,255,.92);--panel-strong:#fff;--text:#173b32;--muted:#58766f;--line:rgba(21,155,112,.19);--sky:#55bfe8;--sky2:#dff5ff;--accent:#159b70;--shadow:0 14px 38px rgba(31,111,91,.10)}
+header,nav,body.light header,body.light nav{background:rgba(255,255,255,.88);border-color:rgba(21,155,112,.18)}
+.brand{background-image:linear-gradient(105deg,#087d58 4%,#159b70 48%,#39aee0 100%);filter:drop-shadow(0 3px 12px rgba(21,155,112,.13))}
+.tag,body.light .tag{color:#168b69}
+.logo-slot{background:linear-gradient(145deg,#fff,#e4f8ff 55%,#d8f8e9);border-color:rgba(21,155,112,.25)}
+.panel{background:rgba(255,255,255,.88);border-color:rgba(21,155,112,.16);box-shadow:var(--shadow)}
+.stat,.card{background:linear-gradient(145deg,#fff,#f0fbff 68%,#f0fff7);border-color:rgba(21,155,112,.18)}
+.stat b,body.light .stat b{color:#159b70}
+.navbtn,.btn,body.light .navbtn,body.light .btn{color:#175846;border-color:rgba(21,155,112,.24);background:linear-gradient(135deg,#fff,#e9f8ff 70%,#effff6);box-shadow:inset 0 1px 0 #fff,0 6px 16px rgba(38,126,104,.09)}
+.navbtn.active,body.light .navbtn.active{color:#fff;border-color:#159b70;background:linear-gradient(135deg,#20b783,#11865f 72%,#168fc0)}
+body.light .btn{color:#fff;background:linear-gradient(135deg,#159b70,#087d58)}
+body.light .btn.gold{color:#174b3c;background:linear-gradient(135deg,#fff,#dff5ff 55%,#dff9eb)}
+body.light .btn.green{color:#fff;background:linear-gradient(135deg,#24b982,#11865f)}
+body.light .btn.red{color:#fff;background:linear-gradient(135deg,#e9828d,#c84e61)}
+body.light .btn.gray{color:#245246;background:linear-gradient(135deg,#f1fbff,#dff6ed)}
+body.light .btn.outline{background:#f2fbff;color:#17644d}
+input,select,textarea,body.light input,body.light select,body.light textarea{color:#173b32;background:#fff;border-color:rgba(21,155,112,.22)}
+input:focus,select:focus,textarea:focus{border-color:#159b70;box-shadow:0 0 0 3px rgba(21,155,112,.12)}
+.badge{background:linear-gradient(135deg,#e5fff2,#dff5ff);color:#116849;border-color:#c9f0df}
+a,body.light a{color:#087fba}
+.resource-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.resource-actions .btn{min-width:0;width:100%;white-space:normal}
+.card .resource-title{font-size:17px;line-height:1.45;color:#126b50;margin:0}
+.card .resource-meta{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0}
+.card .resource-meta span{font-size:11px;padding:5px 9px;border-radius:20px;background:#eaf8ff;color:#27617a;border:1px solid #d5edf7}
+.card .resource-meta span.subject-chip{background:#e8fbf1;color:#16734f;border-color:#d0f0df}
+@media(max-width:420px){.resource-actions{grid-template-columns:1fr 1fr}.resource-actions .favorite-btn{grid-column:1/-1}}
+
 </style>
 </head>
 <body class="light">
@@ -334,7 +377,7 @@ nav .navbtn{min-width:max-content;max-width:100%}
  <button class="navbtn active" type="button" onclick="show('home',this)">🏠 Home</button>
  <button class="navbtn" type="button" onclick="show('library',this)">📚 Library</button>
  <button class="navbtn" type="button" onclick="show('saved',this)">⭐ Saved</button>
- <button class="navbtn" type="button" onclick="show('upload',this)">📤 Add Link</button>
+ <button class="navbtn" type="button" onclick="show('upload',this)">📤 Upload Paper</button>
  <button class="navbtn" type="button" onclick="show('requests',this)">🙏 Requests</button>
  <button class="navbtn" type="button" onclick="show('chat',this)">💬 Chat</button>
  <button class="navbtn" type="button" onclick="show('notifications',this)">🔔 Notifications <span id="notifBadge"></span></button>
@@ -419,29 +462,35 @@ nav .navbtn{min-width:max-content;max-width:100%}
 
 <section id="upload" class="view hidden">
  <div class="panel">
-  <h2>📤 Upload a PDF Resource</h2>
-  <p>Select a PDF directly from your phone or computer. The file is uploaded securely to Firebase Storage and submitted to the Admin for approval.</p>
+  <h2>📤 Upload Learning Material</h2>
+  <p>Select a PDF directly from your phone or computer. The file is uploaded securely to Cloudinary and submitted to the Admin for approval.</p>
   <hr>
-  <input id="resTitle" placeholder="Resource title *" maxlength="180">
+  <label for="resTitle">Paper / Resource title *</label>
+  <input id="resTitle" placeholder="Example: 2026 Grade 13 Political Science Paper" maxlength="180" required>
   <div class="grid">
+   <label for="resCategory">Resource type</label>
    <select id="resCategory">
     <option>Past Papers</option><option>Short Notes</option><option>Worksheets</option>
     <option>Books</option><option>Textbooks</option><option>Research Papers</option>
     <option>Guides</option><option>Presentations</option><option>Assignments</option><option>Other</option>
    </select>
+   <label for="resLevel">Grade / Education level</label>
    <select id="resLevel">
     <option>Nursery</option><option>Primary</option><option>Grade 6</option><option>Grade 7</option>
     <option>Grade 8</option><option>Grade 9</option><option>Grade 10</option>
     <option>Grade 11 - O/L</option><option>Grade 12 - A/L</option><option>Grade 13 - A/L</option>
     <option>University</option><option>Higher Education</option><option>Other</option>
    </select>
-   <input id="resSubject" placeholder="Subject name (any subject) *" maxlength="120">
-   <select id="resMedium">
+   <input id="resSubject" placeholder="Subject name (e.g. Tamil, Biology, Political Science) *" maxlength="120" required>
+   <select id="resMedium" aria-label="Language medium">
     <option>Tamil Medium</option><option>Sinhala Medium</option><option>English Medium</option><option>Other</option>
    </select>
   </div>
-  <input id="resFile" type="file" accept="application/pdf,.pdf">
-  <p class="muted">PDF only • Maximum file size: 20 MB</p>
+  <label for="resYear">Year</label>
+  <input id="resYear" type="number" min="1950" max="2100" placeholder="Year (optional, e.g. 2026)">
+  <label for="resFile">Choose PDF file *</label>
+  <input id="resFile" type="file" accept="application/pdf,.pdf" required>
+  <p class="muted">PDF only • Maximum file size: 20 MB • Add the correct subject, grade, medium and year so students can find it easily.</p>
   <textarea id="resDescription" placeholder="Description / Additional information (optional)" maxlength="1200"></textarea>
   <button class="btn" id="uploadSubmit" type="button" onclick="addResource()">Upload PDF & Submit for Admin Approval</button>
   <p id="uploadStatus" class="muted" aria-live="polite"></p>
@@ -536,6 +585,9 @@ const auth=firebase.auth();
 const db=firebase.firestore();
 const storage=firebase.storage();
 const MAX_PDF_BYTES=20*1024*1024; // 20 MB
+// Cloudinary account configuration. Create this unsigned preset in Cloudinary first.
+const CLOUDINARY_CLOUD_NAME="lhgapnrs";
+const CLOUDINARY_UPLOAD_PRESET="mkpedia_unsigned";
 const $=id=>document.getElementById(id);
 
 let user=null,resources=[],chatStop=null,notifStop=null,resourceStop=null;
@@ -604,7 +656,7 @@ auth.onAuthStateChanged(async currentUser=>{
  listenResources();listenNotifications();loadStats();loadRequests();loadChat();
 });
 
-/* DIRECT PDF UPLOAD TO FIREBASE STORAGE */
+/* DIRECT PDF UPLOAD TO CLOUDINARY (unsigned preset; no API secret in browser) */
 function safeFileName(name){
  return String(name||"document.pdf").normalize("NFKD").replace(/[^a-zA-Z0-9._-]+/g,"_").slice(-100)||"document.pdf";
 }
@@ -612,7 +664,27 @@ function resourceFileUrl(resource){
  return resource.storageURL||resource.fileURL||"";
 }
 function isPdfFile(file){
- return !!file && (file.type==="application/pdf" || /\\.pdf$/i.test(file.name||""));
+ return !!file && (file.type==="application/pdf" || /\.pdf$/i.test(file.name||""));
+}
+function uploadPdfToCloudinary(file,publicId,onProgress){
+ return new Promise((resolve,reject)=>{
+  const xhr=new XMLHttpRequest();
+  const endpoint=`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/raw/upload`;
+  const form=new FormData();
+  form.append("file",file);
+  form.append("upload_preset",CLOUDINARY_UPLOAD_PRESET);
+  form.append("public_id",publicId);
+  xhr.open("POST",endpoint);
+  xhr.upload.onprogress=e=>{if(e.lengthComputable&&onProgress)onProgress(Math.round(e.loaded/e.total*100));};
+  xhr.onload=()=>{
+   let data={};try{data=JSON.parse(xhr.responseText||"{}");}catch(_){}
+   if(xhr.status>=200&&xhr.status<300&&data.secure_url&&data.public_id)resolve(data);
+   else reject(new Error(data.error?.message||`Cloudinary upload failed (${xhr.status})`));
+  };
+  xhr.onerror=()=>reject(new Error("Network error while uploading to Cloudinary."));
+  xhr.onabort=()=>reject(new Error("Upload cancelled."));
+  xhr.send(form);
+ });
 }
 async function addResource(){
  if(!user)return toast("Please login with Google first.");
@@ -624,38 +696,34 @@ async function addResource(){
  if(file.size>MAX_PDF_BYTES)return toast("The PDF is larger than the 20 MB limit.");
  const button=$("uploadSubmit"),progress=$("uploadProgress");
  button.disabled=true;progress.style.display="block";progress.value=0;
- $("uploadStatus").textContent="Preparing secure upload…";
- let docRef=null,storageRef=null;
+ $("uploadStatus").textContent="Preparing Cloudinary upload…";
+ let docRef=null,cloudinaryPublicId="";
  try{
   docRef=await db.collection("resources").add({
    title,category:$("resCategory").value,level:$("resLevel").value,
-   subject,medium:$("resMedium").value,description:$("resDescription").value.trim(),
+   subject,medium:$("resMedium").value,year:$("resYear").value.trim(),description:$("resDescription").value.trim(),
    uploaderUid:user.uid,uploaderName:user.displayName||user.email,
    uploaderEmail:user.email||"",status:"pending",downloads:0,
+   storageProvider:"cloudinary",
    createdAt:firebase.firestore.FieldValue.serverTimestamp()
   });
   const fileName=safeFileName(file.name);
-  const filePath=`resources/${user.uid}/${docRef.id}/${fileName}`;
-  storageRef=storage.ref().child(filePath);
-  const task=storageRef.put(file,{contentType:"application/pdf",customMetadata:{resourceId:docRef.id,uploaderUid:user.uid}});
-  await new Promise((resolve,reject)=>{
-   task.on("state_changed",snap=>{
-    const pct=snap.totalBytes?Math.round(snap.bytesTransferred/snap.totalBytes*100):0;
-    progress.value=pct;$("uploadStatus").textContent=`Uploading PDF… ${pct}%`;
-   },reject,resolve);
+  cloudinaryPublicId=`resources/${user.uid}/${docRef.id}/${fileName.replace(/\.pdf$/i,"")}`;
+  const uploaded=await uploadPdfToCloudinary(file,cloudinaryPublicId,pct=>{
+   progress.value=pct;$("uploadStatus").textContent=`Uploading PDF to Cloudinary… ${pct}%`;
   });
-  const storageURL=await storageRef.getDownloadURL();
+  cloudinaryPublicId=uploaded.public_id;
   await docRef.update({
-   status:"pending",storageURL,filePath,fileName,contentType:"application/pdf",
-   fileSize:file.size,uploadedAt:firebase.firestore.FieldValue.serverTimestamp()
+   status:"pending",storageURL:uploaded.secure_url,cloudinaryPublicId,
+   fileName,contentType:"application/pdf",fileSize:file.size,
+   uploadedAt:firebase.firestore.FieldValue.serverTimestamp()
   });
-  await notify(user.uid,"Resource submitted","Your PDF has been uploaded and is waiting for admin approval.",docRef.id);
-  $("resTitle").value="";$("resSubject").value="";$("resFile").value="";$("resDescription").value="";
+  await notify(user.uid,"Resource submitted","Your PDF has been uploaded to Cloudinary and is waiting for admin approval.",docRef.id);
+  $("resTitle").value="";$("resSubject").value="";$("resYear").value="";$("resFile").value="";$("resDescription").value="";
   progress.value=100;$("uploadStatus").textContent="Upload complete. Your resource is waiting for Admin approval.";
-  toast("PDF uploaded and submitted for review.");
+  toast("PDF uploaded to Cloudinary and submitted for review.");
  }catch(error){
   console.error(error);
-  if(storageRef){try{await storageRef.delete();}catch(cleanupError){console.warn("Storage cleanup:",cleanupError);}}
   if(docRef){try{await docRef.delete();}catch(cleanupError){console.warn("Record cleanup:",cleanupError);}}
   $("uploadStatus").textContent="Upload failed: "+(error.message||"Please try again.");
   toast("Upload failed: "+(error.message||"Unknown error"));
@@ -683,14 +751,20 @@ let recentIds=readLocalList(STORAGE_RECENT);
 function saveLocalList(key,list){try{localStorage.setItem(key,JSON.stringify(list));}catch(e){toast("This browser could not save local data.");}}
 function resourceCard(r){
  const saved=favoriteIds.includes(r.id);
+ const meta=[r.level,r.subject,r.medium,r.year].filter(Boolean);
  return `<article class="card">
-  <div class="split"><h3><a href="/paper/${encodeURIComponent(r.id)}">${esc(r.title)}</a></h3><span class="badge">${esc(r.category||"Resource")}</span></div>
-  <div class="meta">${esc(r.level||"")} • ${esc(r.subject||"")} • ${esc(r.medium||"")}</div>
-  <p>${esc(r.description||"")}</p>
-  <div class="meta">Uploaded by: <b>${esc(r.uploaderName||"MK PEDIA Member")}</b> • ${Number(r.downloads||0)} opens</div>
+  <div class="split"><h3 class="resource-title">📄 ${esc(r.title)}</h3><span class="badge">${esc(r.category||"Resource")}</span></div>
+  <div class="resource-meta">
+   ${r.level?`<span>🎓 ${esc(r.level)}</span>`:""}
+   ${r.subject?`<span class="subject-chip">📘 ${esc(r.subject)}</span>`:""}
+   ${r.medium?`<span>🌐 ${esc(r.medium)}</span>`:""}
+   ${r.year?`<span>📅 ${esc(r.year)}</span>`:""}
+  </div>
+  ${r.description?`<p>${esc(r.description)}</p>`:""}
+  <div class="meta">Uploaded by: <b>${esc(r.uploaderName||"MK PEDIA Member")}</b> • ${Number(r.downloads||0)} opens / downloads</div>
   <div class="resource-actions">
-   <button class="btn" type="button" onclick="openResource('${esc(r.id)}')">Open / Download ↗</button>
-   <button class="btn outline" type="button" onclick="shareResource('${esc(r.id)}')">Share</button>
+   <button class="btn green" type="button" onclick="openResource('${esc(r.id)}')">↗ Open</button>
+   <button class="btn" type="button" onclick="downloadResource('${esc(r.id)}')">⬇ Download</button>
    <button class="btn outline favorite-btn ${saved?"is-saved":""}" type="button" aria-label="${saved?"Remove saved resource":"Save resource"}" title="${saved?"Remove from saved":"Save for later"}" onclick="toggleFavorite('${esc(r.id)}')">${saved?"★ Saved":"☆ Save"}</button>
   </div></article>`;
 }
@@ -705,7 +779,7 @@ function renderResources(){
  const medium=isLibrary?($("libMedium")?.value||""):($("homeMedium")?.value||"");
  const category=isLibrary?($("libCategory")?.value||""):($("homeCategory")?.value||"");
  let filtered=resources.filter(r=>
-  (!q||[r.title,r.subject,r.description,r.level,r.category,r.medium,r.uploaderName].join(" ").toLowerCase().includes(q))&&
+  (!q||[r.title,r.subject,r.description,r.level,r.category,r.medium,r.year,r.uploaderName].join(" ").toLowerCase().includes(q))&&
   (!level||r.level===level)&&(!medium||r.medium===medium)&&(!category||r.category===category)
  );
  if(isLibrary){
@@ -753,6 +827,21 @@ async function openResource(id){
  const win=window.open(url,"_blank","noopener");
  if(!win)toast("Allow pop-ups to open the PDF.");
  try{await db.collection("resources").doc(id).update({downloads:firebase.firestore.FieldValue.increment(1)});}catch(error){console.warn(error);}
+}
+async function downloadResource(id){
+ const resource=resources.find(r=>r.id===id);if(!resource)return;
+ const url=resourceFileUrl(resource);if(!url)return toast("This file is unavailable.");
+ const filename=safeFileName(resource.fileName||((resource.title||"MK-PEDIA-resource")+".pdf"));
+ try{
+  const response=await fetch(url);if(!response.ok)throw new Error("Download request failed.");
+  const blob=await response.blob(),objectUrl=URL.createObjectURL(blob);
+  const link=document.createElement("a");link.href=objectUrl;link.download=filename;
+  document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(objectUrl),1500);
+  try{await db.collection("resources").doc(id).update({downloads:firebase.firestore.FieldValue.increment(1)});}catch(error){console.warn(error);}
+ }catch(error){
+  toast("Direct download was blocked by the file host. Opening the PDF instead.");
+  window.open(url,"_blank","noopener");
+ }
 }
 async function shareResource(id){
  const r=resources.find(x=>x.id===id);if(!r)return;
@@ -854,7 +943,7 @@ async function loadAdmin(){
   $("adminResources").innerHTML=pending.map(r=>`
    <div class="card">
     <h3>${esc(r.title)}</h3>
-    <p>${esc(r.level)} • ${esc(r.subject)} • ${esc(r.medium)} • ${esc(r.category)}</p>
+    <p>${esc(r.level)} • ${esc(r.subject)} • ${esc(r.medium)} • ${esc(r.category)} • ${esc(r.year||"Year not given")}</p>
     <p>${esc(r.description||"")}</p>
     <div class="meta">Uploader: ${esc(r.uploaderName)} (${esc(r.uploaderEmail)})</div>
     <p><a href="${esc(resourceFileUrl(r))}" target="_blank" rel="noopener">Preview uploaded PDF ↗</a></p>
@@ -887,17 +976,23 @@ async function reviewResource(id,status){
 }
 async function deleteResource(id){
  if(!isAdmin())return toast("Admin access required.");
- if(!confirm("Delete this resource from MK PEDIA? Its uploaded PDF in Firebase Storage will also be deleted. This cannot be undone."))return;
+ if(!confirm("Remove this resource from the MK PEDIA library? The Cloudinary file will remain in Cloudinary and may need manual deletion from its dashboard."))return;
  try{
   const ref=db.collection("resources").doc(id),snap=await ref.get();
   if(!snap.exists)return toast("Resource not found.");
   const r=snap.data();
-  if(r.filePath){
+  // Cloudinary deletion needs a private server-side API. To keep this version
+  // entirely on free static hosting + Firebase Spark, remove only the Firestore
+  // listing. Existing Firebase Storage files are deleted through the client SDK.
+  if(r.storageProvider!=="cloudinary"&&r.filePath){
    try{await storage.ref().child(r.filePath).delete();}
    catch(storageError){if(storageError.code!=="storage/object-not-found")throw storageError;}
   }
   await ref.delete();
-  toast("Resource and its stored PDF deleted.");loadAdmin();
+  toast(r.storageProvider==="cloudinary"
+    ?"Resource removed from MK PEDIA. Delete its file manually in Cloudinary if needed."
+    :"Resource deleted.");
+  loadAdmin();
  }catch(error){toast("Delete failed: "+error.message);}
 }
 async function closeRequest(id){
