@@ -35,8 +35,8 @@ exports.handler = async (event) => {
     const description = plain(r.description, 500) || `${title} ${subject} ${level} ${medium} learning resource from MK PEDIA.`;
     const url = `${SITE}/paper/${encodeURIComponent(id)}`;
     const published = dateISO(r.createdAt);
-    const drive = String(r.fileURL || '');
-    if (!/^https:\/\/(drive\.google\.com|docs\.google\.com)\//i.test(drive)) {
+    const fileLink = String(r.storageURL || r.fileURL || '');
+    if (!/^https:\/\/(drive\.google\.com|docs\.google\.com|firebasestorage\.googleapis\.com)\//i.test(fileLink)) {
       return { statusCode: 404, headers: { 'Content-Type': 'text/html; charset=utf-8', 'X-Robots-Tag': 'noindex' }, body: '<h1>Resource link unavailable</h1>' };
     }
 
@@ -76,7 +76,7 @@ exports.handler = async (event) => {
 <h1>${esc(title)}</h1>
 <div class="meta">${[category, level, subject, medium].filter(Boolean).map(x => `<span class="tag">${esc(x)}</span>`).join('')}</div>
 <p class="desc">${esc(description)}</p>
-<p><a class="btn" href="${esc(drive)}" target="_blank" rel="noopener noreferrer">Open / Download Paper ↗</a></p>
+<p><a class="btn" href="${esc(fileLink)}" target="_blank" rel="noopener noreferrer">Open / Download Paper ↗</a></p>
 <p>Educational resources in Tamil, Sinhala and English.</p>
 </article><footer>MK PEDIA · Designed by Khalid Fairooz · <a class="back" href="/">Visit the library</a></footer></main></body></html>`;
 
@@ -94,4 +94,4 @@ exports.handler = async (event) => {
     return { statusCode: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' }, body: 'MK PEDIA page is temporarily unavailable.' };
   }
 };
-              
+      
