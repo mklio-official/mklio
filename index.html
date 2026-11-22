@@ -173,7 +173,6 @@ async function openDownloadUrl(r){
 }
 let user=null,resources=[],chatStop=null,notifStop=null,resourceStop=null,requestCache=[];
 function toast(m){$("toast").textContent=m;$("toast").style.display="block";clearTimeout(toast.timer);toast.timer=setTimeout(()=>$("toast").style.display="none",3500)}
-const DOWNLOAD_GITHUB="https://raw.githubusercontent.com/mkpedia/mkpedia-papers/main/";const DOWNLOAD_GITLAB="https://gitlab.com/mkpedia/mkpedia-papers/-/raw/main/";function getDownloadUrls(r){const fn=r.fileName||"";return[DOWNLOAD_GITHUB+encodeURIComponent(fn),DOWNLOAD_GITLAB+encodeURIComponent(fn)]}async function openDownloadUrl(r){const urls=getDownloadUrls(r);for(let url of urls){try{const res=await fetch(url,{method:'HEAD'});if(res.ok){window.open(url,'_blank','noopener');return true}}catch(e){}}window.open(urls[0],'_blank','noopener');return false}
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function isAdmin(){return !!user&&String(user.email||"").toLowerCase()===ADMIN_EMAIL}
 function stamp(v){try{return v&&v.toDate?v.toDate().toLocaleString():"Recently"}catch(e){return ""}}
