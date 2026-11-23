@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /.netlify/
-Sitemap: https://mk-pedia.netlify.app/sitemap.xml
