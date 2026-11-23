@@ -1,0 +1,15 @@
+{
+  "name": "MKLIO CINEMA",
+  "short_name": "MKLIO",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4fbf8",
+  "theme_color": "#f4fbf8",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
