@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mklio-official.github.io/mklio/sitemap.xml
